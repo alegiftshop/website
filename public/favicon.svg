@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 99.999996"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="64.356438"
+       y="114.85148"
+       width="479.20792"
+       height="369.30695"
+       id="rect5" />
+    <rect
+       x="31.578947"
+       y="108.27068"
+       width="724.32654"
+       height="647.63483"
+       id="rect2" />
+    <rect
+       x="64.356438"
+       y="114.85148"
+       width="479.20792"
+       height="369.30695"
+       id="rect5-1" />
+    <rect
+       x="64.356438"
+       y="114.85148"
+       width="479.20792"
+       height="369.30695"
+       id="rect5-4" />
+    <rect
+       x="64.356438"
+       y="114.85148"
+       width="479.20792"
+       height="369.30695"
+       id="rect5-8" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-327.52466,-267.28464)">
+    <path
+       style="fill:none;stroke:#0055ff;stroke-width:20.0002;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="path2"
+       d="m 397.52477,367.28464 a 29.999887,29.999887 0 0 1 29.99989,-29.99989" />
+    <path
+       style="fill:none;stroke:#00b000;stroke-width:20.0003;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="path2-7"
+       d="M 377.52482,367.28464 A 49.999836,49.999836 0 0 1 427.52466,317.2848" />
+    <path
+       style="fill:none;stroke:#ffa000;stroke-width:19.9999;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="path2-7-8"
+       d="m 357.52463,367.28464 a 70.000031,70.000031 0 0 1 70.00003,-70.00003" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:20.0005;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="path2-7-8-0"
+       d="m 337.52491,367.28464 a 89.999748,89.999748 0 0 1 89.99975,-89.99975" />
+  </g>
+</svg>
