@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import Copy from './Copy.jsx';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useState } from "react";
 import { CgMenu } from "react-icons/cg";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { Button } from "react-bootstrap";
 import Logo from "../assets/Logo.jsx";
 
 export default function SideBar() {
@@ -13,27 +12,29 @@ export default function SideBar() {
 
   return (
     <>
-      <Button variant="light" onClick={handleShow} className="text-2xl mx-2" title='Menu'>
-        <CgMenu/>
+      <Button onClick={handleShow} variant="light" className="text-2xl" title="Menu">
+        <CgMenu />
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
-   
-        <Offcanvas.Header  closeButton>
-            <Offcanvas.Title ><a href="#home" className= "fixed" title="Home"><Logo/></a></Offcanvas.Title>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>
+            <a href="#home" className="fixed" title="Home">
+              <Logo />
+            </a>
+          </Offcanvas.Title>
         </Offcanvas.Header>
 
-        <Offcanvas.Body>   
-            <div className=' translate-y-[45px]'>
-                <ul>
-                    <li>A</li>
-                    <li>A</li>
-                    <li>A</li>
-                    <li>A</li>
-                    <li>A</li>
-                </ul>
-            <Copy/>
-            </div>
+        <Offcanvas.Body>
+          <div className=" translate-y-[45px]">
+            <ul>
+              <li>Clothing</li>
+              <li>Flowers</li>
+              <li>Gifts</li>
+              <li>Tools</li>
+              <li>Books</li>
+            </ul>
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>

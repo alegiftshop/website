@@ -9,45 +9,7 @@
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs1">
-    <rect
-       x="-6.1383748"
-       y="122.15366"
-       width="373.82703"
-       height="236.32742"
-       id="rect3" />
-    <rect
-       x="-85.246292"
-       y="-298.36203"
-       width="527.56195"
-       height="274.23572"
-       id="rect9" />
-    <rect
-       x="-50.665249"
-       y="-237.24203"
-       width="486.54724"
-       height="243.67572"
-       id="rect8" />
-    <rect
-       x="-149.58311"
-       y="-497.80618"
-       width="702.07556"
-       height="491.3725"
-       id="rect7" />
-    <rect
-       x="-64.336823"
-       y="-286.29886"
-       width="529.97461"
-       height="447.94513"
-       id="rect2" />
-    <rect
-       x="75.939217"
-       y="317.564"
-       width="672.40723"
-       height="476.34598"
-       id="rect1" />
-  </defs>
+ 
   <g
      id="layer1"
      transform="translate(-99.171499,-35.6219)">

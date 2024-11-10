@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
+import { Button } from "react-bootstrap";
 
-export default function DropdownButton({ children }) {
+export default function DropdownButton({ head, content, title, alt }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -15,33 +16,22 @@ export default function DropdownButton({ children }) {
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
-    <div ref={dropdownRef} className="relative inline-block">
-      <button
-        onClick={toggleDropdown}
-        className="header-button"
-      >
-        {children}
-      </button>
+    <div ref={dropdownRef} className="relative inline-block" alt={alt}>
+      <Button onClick={toggleDropdown} variant="light" className="text-2xl" title={title}>
+        {head}
+      </Button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg">
-          <div className="p-4">Dropdown Content</div>
-          <button
-            onClick={toggleDropdown}
-            className="absolute top-0 right-0 mt-1 mr-1 text-gray-500 hover:text-gray-700"
-          >
-            ✕
-          </button>
+        <div className="absolute right-0 mt-1 w-48 bg-white border border-gray-300 rounded-lg">
+          <div className="p-2">{content}</div>
         </div>
       )}
     </div>
   );
-};
-
- 
+}

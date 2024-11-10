@@ -3,12 +3,17 @@
   max-height: 100vh;
   margin: 0 auto;
   padding: 0 auto;
+  font-family: Helvetica, sans-serif;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer components {
+@layer components{
   .header-button {
-    @apply  bg-white px-4 py-2 text-black  rounded
+    @apply bg-white px-3 py-2 text-black rounded-lg text-2xl hover:bg-gray-300;
   }
-}
+  .link-text{
+    @apply text-blue-700 hover:underline;
+  }
+};
