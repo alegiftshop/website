@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { FiSearch } from "react-icons/fi";
+import axios from "axios";
 
 export default function SearchBar() {
   const [results, setResults] = useState([]);
-  const [allUsers, setAllUsers] = useState([]);
+  const [allItems, setAllItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleInputChange = (event) => {
@@ -14,34 +14,34 @@ export default function SearchBar() {
     setSearchTerm("");
   };
 
-  // Fetch all users from the API when the component mounts
+  // Fetch all Items from the API when the component mounts
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchItems = async () => {
       try {
         const response = await axios.get(
           "https://jsonplaceholder.typicode.com/users"
         );
-        setAllUsers(response.data);
+        setAllItems(response.data);
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching items:", error);
       }
     };
-    fetchUsers();
+    fetchItems();
   }, []);
 
-  // Filter users based on the query
+  // Filter Items based on the query
   useEffect(() => {
     if (searchTerm === "") {
       setResults([]);
     } else {
-      const filteredUsers = allUsers
-        .filter((user) =>
-          user.name.toLowerCase().includes(searchTerm.toLowerCase())
+      const filteredItems = allItems
+        .filter((item) =>
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
         )
         .slice(0, 10);
-      setResults(filteredUsers);
+      setResults(filteredItems);
     }
-  }, [searchTerm, allUsers]);
+  }, [searchTerm, allItems]);
 
   return (
     <>
@@ -72,9 +72,9 @@ export default function SearchBar() {
       </div>
 
       <div className="mt-1 absolute bg-white rounded border border-gray-300">
-        {results.map((user) => (
-          <div key={user.id} className="p-2 mt-1 ">
-            {user.name}
+        {results.map((item) => (
+          <div key={item.id} className="p-2 mt-1 cursor-pointer">
+            {item.name}
           </div>
         ))}
       </div>

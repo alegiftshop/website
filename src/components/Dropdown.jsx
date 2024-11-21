@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "react-bootstrap";
 
-export default function DropdownButton({ head, content, title, alt }) {
+export default function Dropdown({ head, content, title, alt }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
