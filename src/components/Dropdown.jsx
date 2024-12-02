@@ -1,35 +1,30 @@
-import { useState, useEffect, useRef } from "react";
-import { Button } from "react-bootstrap";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function Dropdown({ head, content, title, alt }) {
+export default function Dropdown({ title, link, children, head, content }) {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const handleMouseEnter = () => {
+    setIsOpen(true);
   };
-
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
+  const handleMouseLeave = () => {
+    setIsOpen(false);
   };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
-    <div ref={dropdownRef} className="relative inline-block" alt={alt}>
-      <Button onClick={toggleDropdown} variant="light" className="text-2xl" title={title}>
-        {head}
-      </Button>
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative inline-block"
+    >
+      {children}
+      <button type="button" className="light-button text-2xl" >
+        <Link to={link} title={title}>
+          {head}
+        </Link>
+      </button>
       {isOpen && (
-        <div className="absolute right-0 mt-1 w-48 bg-white border border-gray-300 rounded-lg">
-          <div className="p-2">{content}</div>
+        <div className="py-2 px-3 absolute right-0 bg-white rounded-lg hidden md:block">
+          {content}
         </div>
       )}
     </div>

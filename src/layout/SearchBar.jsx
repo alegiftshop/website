@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import axios from "axios";
 
-export default function SearchBar() {
+export default function Searchbar({id}) {
   const [results, setResults] = useState([]);
   const [allItems, setAllItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,8 +45,9 @@ export default function SearchBar() {
 
   return (
     <>
-      <div className="flex items-center border border-gray-300 rounded-lg py-[6px] bg-white w-full">
+      <div className="px-1 py-2 flex border-[1px] border-gray-400 rounded-lg bg-white w-full">
         <button
+          type="button"
           className="text-2xl hover:text-gray-500 px-2"
           alt="search"
           title="Search"
@@ -54,15 +55,17 @@ export default function SearchBar() {
           <FiSearch />
         </button>
         <input
+          id={id}
           value={searchTerm}
           onChange={handleInputChange}
+          autoFocus
           className="flex-grow outline-none w-full"
-          placeholder="Search..."
+          placeholder="Search for products"
         />
         <div className="text-end translate-x-[-10px]">
           <button
             onClick={clearSearch}
-            className={`hover:text-gray-500 ${
+            className={`hover:text-gray-500 ml-4 ${
               searchTerm ? "visible" : "hidden"
             }`}
           >
@@ -71,7 +74,7 @@ export default function SearchBar() {
         </div>
       </div>
 
-      <div className="mt-1 absolute bg-white rounded border border-gray-300">
+      <div className="absolute bg-white rounded border border-gray-300">
         {results.map((item) => (
           <div key={item.id} className="p-2 mt-1 cursor-pointer">
             {item.name}

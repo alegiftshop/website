@@ -1,7 +1,17 @@
-import React from 'react'
+import { useState } from 'react';
 
 export default function Counter() {
+  const [count, setCount] = useState(1);
+
   return (
-    <div>Counter</div>
-  )
-}
+    <div className="relative inline-block">
+
+      {count > 0 && (
+        <span className="absolute top-[-32px] right-[-50px] inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-600 rounded-full">
+          {count}
+        </span>
+      )}
+    </div>
+  );
+};
+

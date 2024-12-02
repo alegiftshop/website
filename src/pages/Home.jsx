@@ -1,6 +1,10 @@
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <>
+    <div className="text-logo_red">Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div><div>Home</div>
+
+
+    </>
   )
 }

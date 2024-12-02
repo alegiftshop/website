@@ -1,21 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-
-        r: '#ff0000',
-        y: '#ffa000',
-        g: '#00b000',
-        b: '#0055ff',
-        p: '#9000ff',
-      }
-    }
+        logo_red: "#ff0000",
+        logo_yellow: "#ffa000",
+        logo_green: "#00b000",
+        logo_blue: "#0055ff",
+        logo_purple: "#9000ff",
+      },
+    },
   },
   plugins: [],
-}
-
+};

@@ -1,0 +1,16 @@
+body.modal-open {
+  overflow: hidden;
+}
+html,
+:host {
+  -webkit-text-size-adjust: 100%; /* For Safari and older Chrome versions */
+  text-size-adjust: 100%; /* For modern browsers */
+}
+:root {
+  max-width: 90vw;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: Helvetica, sans-serif;
+}
+
