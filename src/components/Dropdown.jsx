@@ -17,13 +17,12 @@ export default function Dropdown({ title, link, children, head, content }) {
       className="relative inline-block"
     >
       {children}
-      <button type="button" className="light-button text-2xl" >
-        <Link to={link} title={title}>
+        <Link to={link} title={title} className="light-button text-2xl inline-block">
           {head}
         </Link>
-      </button>
+     
       {isOpen && (
-        <div className="py-2 px-3 absolute right-0 bg-white rounded-lg hidden md:block">
+        <div className="absolute right-0 bg-white rounded-lg hidden md:block z-[100]">
           {content}
         </div>
       )}

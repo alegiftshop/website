@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function FAQ() {
   return (
-    <div>FAQ</div>
+    <div className=" justified-text">FAQ</div>
   )
 }

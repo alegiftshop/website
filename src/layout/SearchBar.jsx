@@ -49,7 +49,7 @@ export default function Searchbar({id}) {
         <button
           type="button"
           className="text-2xl hover:text-gray-500 px-2"
-          alt="search"
+          alt="Search"
           title="Search"
         >
           <FiSearch />

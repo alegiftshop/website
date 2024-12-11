@@ -24,7 +24,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex flex-col sticky top-0 bg-white ">
+    <header className="flex flex-col sticky top-0 bg-white z-50">
       <div className="flex flex-row items-center justify-between">
         <div className="flex items-center mx-3 my-1">
           <Link to={"/"} title="Home">
@@ -33,7 +33,7 @@ export default function Header() {
         </div>
 
         <div className="w-[750px] hidden md:block">
-          <Searchbar id={"sb1"} />
+          <Searchbar id={"searchbar"} />
         </div>
 
         <div className="mx-4 space-x-2 flex items-center">
@@ -43,7 +43,7 @@ export default function Header() {
             onClick={openModal}
             className="primary-button"
           >
-            Login
+            Log in
           </button>
 
           <Dropdown
@@ -74,7 +74,7 @@ export default function Header() {
       </div>
 
       <div className="block md:hidden">
-        <Searchbar id={"sb2"} />
+        <Searchbar id={"searchbar_mobile"} />
       </div>
 
       <Login isOpen={isModalOpen} closeModal={closeModal} />

@@ -1,6 +1,8 @@
-
-export default function Item({text}) {
+export default function Item({ title }) {
   return (
-    <p className="hover:text-gray-600">{text}</p>
-  )
+    <>
+      <img src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXX" alt="" />
+      <p className="hover:text-gray-600">{title}</p>
+    </>
+  );
 }

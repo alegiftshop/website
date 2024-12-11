@@ -7,7 +7,7 @@ export default function Counter() {
     <div className="relative inline-block">
 
       {count > 0 && (
-        <span className="absolute top-[-32px] right-[-50px] inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-600 rounded-full">
+        <span className="absolute top-[-38px] right-[-55px] inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-600 rounded-full">
           {count}
         </span>
       )}

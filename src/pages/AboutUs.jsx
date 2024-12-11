@@ -1,6 +1,6 @@
 
 export default function AboutUs() {
   return (
-    <div>About</div>
+    <div className="text-content">About</div>
   )
 }
