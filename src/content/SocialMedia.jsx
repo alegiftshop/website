@@ -13,7 +13,7 @@ export default function SocialMedia() {
     <a href="https://instagram.com/alegiftshop" title="Instagram" alt="Instagram">
       <FaInstagram />
     </a>
-    <a href="https://pinterest.com/alegiftshop" title="Pinterst" alt="Pinterest">
+    <a href="https://pinterest.com/alegiftshop" title="Pinterest" alt="Pinterest">
       <FaPinterest />
     </a>
     <a href="https://tiktok.com/@alegiftshop" title="TikTok" alt="TikTok">

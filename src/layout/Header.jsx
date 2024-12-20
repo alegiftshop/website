@@ -4,8 +4,7 @@ import { FaRegBell } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.jsx";
-import Login from "./Login.jsx";
-import Searchbar from "./Searchbar.jsx";
+import Searchbar from "../content/Searchbar.jsx";
 import Dropdown from "../components/Dropdown.jsx";
 import ProfileOptions from "../content/ProfileOptions.jsx";
 import Counter from "../components/Counter.jsx";
@@ -13,15 +12,7 @@ import NotificationList from "../content/NotificationList.jsx";
 import CartItems from "../content/CartItems.jsx";
 
 export default function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => {
-    document.body.classList.add("modal-open");
-    setIsModalOpen(true);
-  };
-  const closeModal = () => {
-    document.body.classList.remove("modal-open");
-    setIsModalOpen(false);
-  };
+
 
   return (
     <header className="flex flex-col sticky top-0 bg-white z-50">
@@ -37,14 +28,14 @@ export default function Header() {
         </div>
 
         <div className="mx-4 space-x-2 flex items-center">
-          <button
-            id=""
-            title="Log In"
-            onClick={openModal}
+          <Link
+            id="login"
+            title="Log in"
+            to="/login"
             className="primary-button"
           >
             Log in
-          </button>
+          </Link>
 
           <Dropdown
             title={"Cart"}
@@ -73,11 +64,10 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="block md:hidden">
+      <div className="block mb-2 md:hidden">
         <Searchbar id={"searchbar_mobile"} />
       </div>
 
-      <Login isOpen={isModalOpen} closeModal={closeModal} />
     </header>
   );
 }

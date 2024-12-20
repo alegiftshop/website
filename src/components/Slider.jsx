@@ -15,8 +15,6 @@ export default function Slider({ children }) {
     <>
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
-        
         loop={true}
         autoplay={{
             delay: 2500,
@@ -27,7 +25,6 @@ export default function Slider({ children }) {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
       >
         <SwiperSlide>
           <div className="flex justify-center">{children}</div>
