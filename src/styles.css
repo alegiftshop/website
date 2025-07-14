@@ -1,39 +1,202 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@layer components {
-  .form-container {
-    @apply flex flex-col space-y-3 mb-4 w-[450px];
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 17px;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+header {
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  display: flex;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+a {
+  font-weight: 400;
+  color: royalblue;
+  text-decoration: none;
+}
+
+input {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+footer {
+  width: 100%;
+  gap: 0.6rem;
+  padding: 15px 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
   }
-  .form-input {
-    @apply w-full p-2 border border-gray-400 rounded;
+  footer {
+    flex-direction: column;
   }
-  .header-text {
-    @apply text-xl;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-container {
+  font-size: 1rem;
+  padding: 10px 14px;
+}
+
+.subtitle {
+  font-size: 1.28rem;
+  font-weight: 500;
+}
+
+.base-button {
+  padding: 8px 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.light-button {
+  background: #ffffff;
+}
+
+.light-button:hover {
+  background: lightgray;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: #3b82f6;
+}
+
+.cancel-button {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.cancel-button:hover {
+  background-color: #f87171;
+}
+
+.blocked-button {
+  background-color: #6b7280;
+  color: white;
+}
+
+.option {
+  margin: 0.4rem 0;
+  display: flex;
+  cursor: pointer;
+}
+
+.option:hover {
+  color: #4b5563;
+}
+
+.form-container {
+  width: 100%;
+  height: 93vh; 
+  display: flex;
+  justify-content: center;
+}
+
+.form-dimensions {
+  flex: 1;
+  padding: 0 20px;
+  max-width: 550px;
+  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid lightgray;
+}
+
+.form-input:focus {
+  border: 2px solid black;
+}
+
+.otp-input::placeholder {
+  color: transparent;
+}
+
+.text-underline {
+  font-weight: 400;
+  color: black;
+  cursor: pointer;
+}
+
+.text-underline:hover {
+  text-decoration: underline;
+}
+
+.border {
+  border: 0.16rem solid lightgray;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1.2rem;
   }
-  .text-content {
-    @apply md:p-8 text-justify leading-8;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .light-button:hover {
+    background: #ffffff;
   }
-  .dropdown-container {
-    @apply px-3 py-2 border border-gray-300 whitespace-nowrap overflow-y-auto max-h-[calc(100vh-10rem)] rounded-lg;
+  .primary-button:hover {
+    background: #2563eb;
   }
-  .light-button {
-    @apply bg-white md:hover:bg-gray-300 rounded-lg py-2 px-3 whitespace-nowrap;
+  .cancel-button:hover {
+    background-color: #dc2626;
   }
-  .primary-button {
-    @apply bg-blue-600 hover:bg-blue-500 rounded-md py-2 px-3 text-white whitespace-nowrap;
-  }
-  .cancel-button {
-    @apply bg-red-600 hover:bg-red-500 rounded-md py-2 px-3 text-white whitespace-nowrap;
-  }
-  .blocked-button {
-    @apply bg-gray-500 rounded-md py-2 px-3 text-white whitespace-nowrap;
-  }
-  .option-list {
-    @apply flex flex-row items-center space-x-2 cursor-pointer hover:text-gray-600 whitespace-nowrap;
-  }
-  .blue-underline{
-    @apply hover:underline hover:text-blue-600
-  }
-  
 }
